@@ -1,32 +1,39 @@
-# create-typescript-library
+# react-get-inner-text
 
-![checks-status](https://img.shields.io/github/checks-status/LukasPolak/create-typescript-library/main?style=flat-square) ![workflow/status](https://img.shields.io/github/workflow/status/lukaspolak/create-typescript-library/CI?style=flat-square) ![codecov](https://img.shields.io/codecov/c/github/lukaspolak/create-typescript-library?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/min/@lukaspolak/create-typescript-library?style=flat-square) ![npm](https://img.shields.io/npm/v/@lukaspolak/create-typescript-library?style=flat-square)
+![checks-status](https://img.shields.io/github/checks-status/LukasPolak/react-get-inner-text/main?style=flat-square) ![workflow/status](https://img.shields.io/github/workflow/status/lukaspolak/react-get-inner-text/CI?style=flat-square) ![codecov](https://img.shields.io/codecov/c/github/lukaspolak/react-get-inner-text?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/min/@lukaspolak/react-get-inner-text?style=flat-square) ![npm](https://img.shields.io/npm/v/@lukaspolak/react-get-inner-text?style=flat-square)
 
-> A short description about what your library is.
+Returns the inner text of [react elements](https://reactjs.org/docs/introducing-jsx.html). This package was inspired with [HTMLElement.innerText](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText) and [Node.textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) web APIs and [react-innertext](https://www.npmjs.com/package/react-innertext) npm package.
 
 ## Motivation
 
-> Elaborate on the reason behind this library: why may people need it? What issues does it solve? How is it different from the similar libraries?
+There is no native API in [React](https://reactjs.org/) to get the nested text content of react elements. This package provides a simple API to get the text content of nested elements (components)
 
 ## Getting started
 
-> Go through the steps necessary to install, configure, and use your library.
+To use this package, you only need to install this dependency, import it and invoke the `getInnerText` function, e.g.:
+
+```tsx
+const innerText = getInnerText(
+  <div>
+    <p>First paragraph.</p>
+    <p>Second paragraph</p>
+  </div>
+)
+
+console.log(innerText) // "First paragraph.Second paragraph"
+```
 
 ### Install
 
 ```bash
-npm install @lukaspolak/create-typescript-library
+npm install @lukaspolak/react-get-inner-text
 ```
 
 or
 
 ```bash
-yarn add @lukaspolak/create-typescript-library
+yarn add @lukaspolak/react-get-inner-text
 ```
-
-## Documentation
-
-> Reference the documentation website, or write the documentation straight in this README file.
 
 ## Contributing
 
@@ -35,26 +42,3 @@ Please read the [Contribution guidelines](.github/CONTRIBUTING.md) to start with
 ## Why the library is prefixed with `@lukaspolak/`
 
 There are a lot of similar libraries/packages on [GitHub](https://github.com/features/packages) and [npm](https://www.npmjs.com/), that can do the same. I wanted to enhance my programming skills, and I didn't want to find a unique name for the package.
-
-## INITIALIZATION TODO
-
-- [ ] replace `create-typescript-library` with repository name
-- [ ] update `keywords` in `package.json` file
-- [ ] remove `INITIALIZATION TODO` section
-- [ ] update `buildEsm.input` array with correct paths
-
-For [React](https://reactjs.org/) based library install (`yarn add @types/react react -D`) dev dependencies, and update `tsconfig.json` file with:
-
-```jsonc
-{
-  // ...
-  "compilerOptions": {
-    // ...
-    "allowSyntheticDefaultImports": true, // replace original
-    "jsx": "react", // add
-    "esModuleInterop": true // add
-    // ...
-  }
-  // ...
-}
-```
