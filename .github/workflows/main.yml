@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Building the library
+        run: yarn build
+
+      - name: Testing the library
+        run: yarn test:coverage
+
+      - name: Codecov
+        uses: codecov/codecov-action@v1.2.1
