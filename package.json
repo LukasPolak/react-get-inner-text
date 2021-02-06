@@ -23,7 +23,7 @@
     "commit": "cz",
     "format": "prettier --write .",
     "hygen:file": "hygen file new",
-    "lint": "eslint ./{src,test}/**/*.ts",
+    "lint": "eslint './{src,test}/**/*.{ts,tsx}'",
     "prepublishOnly": "yarn build && yarn test",
     "start": "rollup -c rollup.config.ts -w",
     "test": "jest",
