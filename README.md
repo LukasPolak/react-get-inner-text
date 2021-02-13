@@ -4,6 +4,10 @@
 
 Returns the inner text of [react elements](https://reactjs.org/docs/introducing-jsx.html). This package was inspired with [HTMLElement.innerText](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText) and [Node.textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) web APIs and [react-innertext](https://www.npmjs.com/package/react-innertext) npm package.
 
+## Demo
+
+[CodeSandbox](https://codesandbox.io/s/react-get-inner-text-49755?file=/src/App.tsx)
+
 ## Motivation
 
 There is no native API in [React](https://reactjs.org/) to get the nested text content of react elements. This package provides a simple API to get the text content of nested elements (components)
