@@ -6,7 +6,7 @@ Returns the inner text of [react elements](https://reactjs.org/docs/introducing-
 
 ## Demo
 
-[CodeSandbox](<[link-to-codesandbox](https://codesandbox.io/s/react-get-inner-text-49755?file=/src/App.tsx)>)
+[CodeSandbox](https://codesandbox.io/s/react-get-inner-text-49755?file=/src/App.tsx)
 
 ## Motivation
 
