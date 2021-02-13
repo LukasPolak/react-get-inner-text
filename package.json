@@ -1,6 +1,6 @@
 {
   "name": "@lukaspolak/react-get-inner-text",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Returns the inner text of react elements",
   "keywords": [
     "react",
