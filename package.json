@@ -1,7 +1,7 @@
 {
   "name": "@lukaspolak/react-get-inner-text",
   "version": "0.0.1",
-  "description": "A repository template for a TypeScript library.",
+  "description": "Returns the inner text of react elements",
   "keywords": [
     "react",
     "jsx",
